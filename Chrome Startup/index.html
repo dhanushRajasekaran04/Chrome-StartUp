@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hi Dhanush!</title>
+</head>
+<body>
+    
+    <div class="my-profile">
+        <img src="dhanush circle image.PNG" alt="dhanush photo" class="my-photo">
+        <img src="jarvis company logo.jpg" alt="jarvis-comapany" class="jarvis-comapany-logo" height="100vh">
+    </div>
+  <div class="gif">
+    <img src="real arc rotator.gif" alt="arc-rotator" class="gif-arc" height="170px">
+  </div>
+  <div class="welcome-photo" id="welcome-photo"></div>
+    <img src="centre no image jarvis.jpg" alt="alone-jarvis" class="alone-jarvis" height="300vh"><br><br>
+    <div class="circle">
+            <img src="output-onlinegiftools.gif" alt="jpg" height="71vh">
+
+    </div>
+    <a href="#" id="toggle-link"  onclick="hideText()" class="click-to-search">Click To Search</a>
+    
+  </div>
+  <div class="search-form" id="search-form">
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" size="40" maxlength="255" placeholder="Search Google..." class="search-input" autocomplete="off">
+        <br><br>
+        <input type="submit" value="Search"  class="search-button">
+        <a href="#"><button type="button" onclick="refreshPage()"  class="back-button">Back</button></a>
+    </form>
+</div>
+    <div class="app-logos-div">
+        <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="instagram" class="instagram-logo"></a>
+        <a href="http://web.whatsapp.com/" target="_blank"><img src="whatsapp.png" alt="whatsapp" class="whatsapp-logo"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="youtube.png" alt="youtube" class="youtube-logo"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" class="facebook-logo"></a>
+        <a href="https://chat.openai.com/" target="_blank"><img src="chatgpt.png" alt="chatgpt" class="chatgpt-logo"></a>
+        <a href="#menu_box" class="menu_icon" onclick="viewCart()" ondblclick="hideCart()"><img src="app.png" alt="menu" class="menu_icon-img"></a>
+        <div id="menu_box" style="display: none;">
+                
+           <!--<a href="#" class="checkout1" onclick="hideCart()">Go Back</a>-->    
+           
+           <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search..." onkeydown="handleKeyDown(event)" autocomplete="off">
+            
+            <div class="all-apps">
+                <a href="https://erp.nttftrg.com/nttf2/" target="_blank"><img src="nttf.png" alt="nttf erp"></a>
+                <a href="https://ubg365.github.io/" target="_blank"><img src="ubg.png" alt="ubg365"></a>
+                <a href="https://www.amazon.in/" target="_blank"><img src="social.png" alt="amazon"></a>
+                <a href="https://www.flipkart.com/" target="_blank"><img src="flipkart.png" alt="flipkart"></a>
+                <a href="https://www.threads.net/login" target="_blank"><img src="threads-app-icon.png" alt="threads"></a>
+                <a href="https://app.netlify.com/teams/srikanth-s-7878/overview" target="_blank"><img src="netlifly.png" alt="netlify"></a>
+                <a href="https://www.programiz.com/c-programming/online-compiler/" target="_blank"><img src="c.png" alt="c compiler"></a>
+                <a href="https://www.programiz.com/cpp-programming/online-compiler/" target="_blank"><img src="c++.png" alt="c++ compiler"></a>
+            </div>
+        </div>
+        </div>
+        <div id="digitalClock"></div>
+
+<script>
+    function updateDigitalClock() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // Add leading zeros to single-digit minutes and seconds
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        // Display the current time in the "digitalClock" div
+        document.getElementById("digitalClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+    }
+
+    // Update the digital clock every second
+    setInterval(updateDigitalClock, 1000);
+
+    // Call the function to display the current time immediately when the page loads
+    updateDigitalClock();
+    </script>
+    </div>
+    <div class="myname">
+        <h3>Developed By:</h3>
+        <p>R.Dhanush</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

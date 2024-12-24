@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+</head>
+<body>
+    <!-- Your existing content here -->
+    <div class="my-profile">
+        <!-- Add an input field for uploading/changing the photo -->
+        <input type="file" id="profile-photo-input" accept="image/*" style="display:none;" onchange="updateProfilePhoto(this)">
+        <label for="profile-photo-input">
+            <img src="dhanush circle image.PNG" alt="dhanush photo" class="my-photo" id="profile-photo">
+        </label>
+        <img src="jarvis company logo.jpg" alt="jarvis-comapany" class="jarvis-comapany-logo" height="100vh">
+    </div>
+    <!-- Rest of your content -->
+    <!-- Your JavaScript and script includes here -->
+    <script>
+        // Function to update the profile photo when the input changes
+        function updateProfilePhoto(input) {
+            var photoElement = document.getElementById("profile-photo");
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    // Update the source of the image with the selected photo
+                    photoElement.src = e.target.result;
+                };
+
+                // Read the selected file as a data URL
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
