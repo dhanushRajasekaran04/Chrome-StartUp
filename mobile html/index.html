@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Iphone 15</title>
+</head>
+<body>
+    <div class="full-iphone">
+        <div class="notch-container">
+            <div class="notch" id="notch">
+            </div>
+            <div class="notch-message" id="notchMessage">
+                <img src="icons/dynamicisland.jpg" alt="dynamicisland">
+            </div>
+        </div>
+       
+        <div class="date-day" id="current-date-day">
+            
+        </div>
+        <div class="time" id="current-time">
+
+        </div>
+        <div class="swipe">
+            
+        </div>
+        <img src="torchlight.png" alt="torchlight" class="torchlight">
+        <img src="photo-camera-interface-symbol-for-button.png" alt="camera" class="camera"  onclick="openCamera()">
+        <a href="#" class="click" onclick="unlock()"><img src="icons/fingersmile-ezgif.com-crop.gif" alt="fingerprint" class="fingerprint"></a>
+        <div id="home">
+            <div class="left-icons">
+         <div class="left-icons1">
+            <img src="icons/settings.png" alt="settings">
+            <img src="icons/calculator.png" alt="calculator"><br>
+         </div>
+         <div class="left-icons2">
+            <img src="icons/clock.png" alt="clock">
+            <img src="icons/gmail.png" alt="gmail">
+         </div>
+         </div>
+         <div class="spotify" onclick="playSong()">
+            <img src="icons/spotify widget.jpeg" alt="spotify-widget">
+         </div>
+
+         
+        <audio id="myAudio">
+            <!-- Replace 'your-audio.mp3' with the path to your audio file -->
+            <source src="your-audio.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+
+
+         <div class="myphoto">
+            <img src="icons/IMG-20231124-WA0060.jpg" alt="my-photo">
+         </div>
+        <div class="pink-widget">
+            <img src="icons/pink-song-widget.jpg" alt="pink-widget">
+        </div>
+
+         <div class="right-icons">
+         <div class="right-icons1">
+            <img src="icons/music.png" alt="music">
+            <img src="icons/notes.png" alt="notes">
+         </div>
+         <div class="right-icons2">
+            <img src="icons/podcast.png" alt="podcast">
+            <img src="icons/tips.png" alt="tips">
+         </div>
+         </div>
+
+         <div class="bottom-icons">
+            <div class="bottom-icons1">
+                <a href="https://web.whatsapp.com/"><img src="icons/whatsapp.png" alt="message"></a>
+                <img src="icons/weather.png" alt="weather">
+            </div>
+            <div class="bottom-icons2">
+                <img src="icons/airdrop.png" alt="airdrop">
+                <img src="icons/homei.png" alt="home">
+            </div>
+         </div>
+         <div class="app-container">
+            <img src="icons/phone.png" alt="phone">
+            <img src="icons/photos.png" alt="photos">
+            <img src="icons/safari.png" alt="safari" onclick="openSafari()">
+            <img src="icons/facetime.png" alt="facetime" onclick="openCamera()">
+        </div>
+
+         <div class="dots">
+            <span class="dot" onclick="unlock1()"></span>
+            <a href="#home2" class="dot" onclick="showHome2()"></a>
+            <a href="#home3" class="dot" onclick="showHome3()"></a>
+        </div>
+</div>
+        <div id="home2">
+            
+            <img src="icons/widgetweather.jpg" alt="weather" class="weather-widget">
+            <div class="home2-icons">
+                <img src="icons/apple-tv.png" alt="apple-tv">
+                <img src="icons/books.png" alt="books">
+                <img src="icons/measure.png" alt="measure">
+                <img src="icons/find-my.png" alt="find-my">
+                <img src="icons/my-shortcuts.png" alt="my-shortcuts">
+                <img src="icons/reminders.png" alt="remainders">
+                <img src="icons/stocks.png" alt="stocks">
+                <img src="icons/translate.png" alt="translate">
+                <img src="icons/tips.png" alt="tips">
+                <img src="icons/voice-memos.png" alt="voice-memos">
+                <img src="icons/wallet.png" alt="wallet">
+                <img src="icons/notes.png" alt="notes">
+                <div class="dots">
+                    <a href="#" class="dot" onclick="refresh()"></a>
+                    <a href="#home2" class="dot" onclick="showHome2()"></a>
+                    <a href="#home3" class="dot" onclick="showHome3()"></a>
+                </div>
+                
+            </div>
+
+            <div class="app-container2">
+                <img src="icons/phone.png" alt="phone">
+                <img src="icons/photos.png" alt="photos">
+                <img src="icons/safari.png" alt="safari" onclick="openSafari()">
+                <img src="icons/facetime.png" alt="facetime" onclick="openCamera()">
+            </div>
+        </div>
+
+        <button onclick="switchOffPhone()" class="button2"></button>
+
+        <!-- Apple Logo (Initially Hidden) -->
+        <div id="appleLogo" class="apple-logo">
+
+        </div>
+
+        <div id="home3" class="home3-img">
+            <div class="home3-images">
+            <img src="icons/calenderwidget.jpg" alt="calender">
+            <img src="icons/calender.jpg" alt="date">
+            </div>
+            <div class="home3-right-icons">
+                <div class="home3-right-icons1">
+                <a href="https://www.instagram.com/" target="_blank"><img src="icons/Instagram_icon.png" alt="Instagram_icon"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="icons/youtube.png" alt="youtube"></a>
+                </div>
+                <div class="home3-right-icons2">
+                    <a href="https://web.telegram.org/a/" target="_blank"><img src="icons/telegram.png" alt="telegram"></a>
+                    <a href="https://open.spotify.com/" target="_blank"><img src="icons/spotify.png" alt="spotify"></a>
+                </div>
+            </div>
+            <div class="myphoto3">
+                <img src="icons/battery.png" alt="clock">
+             </div>
+             <div class="large-photo">
+                <img src="icons/group photo.jpeg" alt="group-photo">
+             </div>
+            <div class="app-container3">
+                <img src="icons/phone.png" alt="phone">
+                <img src="icons/photos.png" alt="photos">
+                <img src="icons/safari.png" alt="safari" onclick="openSafari()">
+                <img src="icons/facetime.png" alt="facetime" onclick="openCamera()">
+            </div>
+            <div class="dots">
+                <a href="#" class="dot" onclick="refresh()"></a>
+                <a href="#home2" class="dot" onclick="showHome2()"></a>
+                <a href="#home3" class="dot" onclick="showHome3()"></a>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+
+
+function switchOffPhone() {
+        // Hide all elements except the Apple logo
+        const elementsToHide = document.querySelectorAll('.full-iphone > *:not(.apple-logo)');
+        elementsToHide.forEach(element => {
+            element.style.display = 'none';
+        });
+
+        // Show the Apple logo
+        const appleLogo = document.getElementById('appleLogo');
+        appleLogo.style.display = 'block';
+    }
+
+function openSafari() {
+    // Open www.google.com in a new window with the specified dimensions
+    const newWindow = window.open('https://www.google.com', 'Google', 'width=375,height=667');
+
+    // Set a timeout to adjust the size after the window is loaded
+    if (newWindow) {
+        newWindow.addEventListener('load', function() {
+            // Adjust the window size after it is loaded
+            newWindow.resizeTo(375, 667);
+        });
+    }
+}
+function refresh() {
+            // Reload the current tab
+            location.reload();
+        }
+
+        
+        function unlock() {
+            // Toggle the 'unlocked' class on the body
+            document.body.classList.toggle('unlocked');
+            
+            // Toggle the visibility of the additional content
+            const homeContent = document.getElementById('home');
+            homeContent.style.display = document.body.classList.contains('unlocked') ? 'block' : 'none';
+        }
+       
+        function showHome2() {
+            // Hide home and show home2
+            const homeContent = document.getElementById('home');
+            const home2Content = document.getElementById('home2');
+
+            homeContent.style.display = 'none';
+            home2Content.style.display = 'block';
+        }
+
+        function showHome3() {
+            // Hide home and show home2
+            const homeContent = document.getElementById('home');
+            const home2Content = document.getElementById('home2')
+            const home3Content = document.getElementById('home3');
+
+            homeContent.style.display = 'none';
+            home2Content.style.display = 'none';
+            home3Content.style.display = 'block';
+        }
+    
+        function updateTime() {
+            const currentTime = new Date();
+            let hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = (hours % 12) || 12; // Convert 0 to 12 for midnight
+            const timeString = `${hours}:${minutes} <span class="${ampm.toLowerCase()}">${ampm}</span>`;
+            document.getElementById('current-time').innerHTML = timeString;
+    
+            const options = { weekday: 'long', day: 'numeric' };
+            const dateString = currentTime.toLocaleDateString(undefined, options);
+            document.getElementById('current-date-day').innerHTML = dateString;
+        }
+    
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        function playSong() {
+                const audio = document.getElementById('myAudio');
+
+                // Replace 'your-audio.mp3' with the path to your audio file
+                audio.src = 'Vikram - Once Upon A Time BGM.mp3';
+
+                // Play the audio
+                audio.play();
+            }
+        
+
+
+            
+           
+            let videoStream; // variable to store the video stream
+
+            function openCamera() {
+                // Check if getUserMedia is supported
+                if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } })
+                        .then(function(stream) {
+                            // Store the video stream in the global variable
+                            videoStream = stream;
+
+                            // Create a video element to display the camera feed
+                            const video = document.createElement('video');
+                            video.id = 'camera-video'; // set an id for easy access
+                            video.srcObject = stream;
+                            video.width = 300; // Set the width of the video element
+                            video.height = 400; // Set the height of the video element
+                            video.autoplay = true;
+                            video.style.border = '2px solid black'; // Optional styling
+                            video.style.borderLeft = 'none';
+                            video.style.borderRadius = '2vh';
+
+                            // Create a close button
+                            const closeButton = document.createElement('button');
+                            closeButton.textContent = 'Close Camera';
+                            closeButton.onclick = closeCamera;
+                            closeButton.style.padding = '1vh';
+
+                            // Append the video element and close button to the document
+                            document.body.appendChild(video);
+                            document.body.appendChild(closeButton);
+                        })
+                        .catch(function(error) {
+                            console.error('Error accessing camera:', error);
+                        });
+                } else {
+                    console.error('getUserMedia is not supported on this browser');
+                }
+            }
+
+            function closeCamera() {
+                // Stop the video stream
+                if (videoStream) {
+                    const tracks = videoStream.getTracks();
+                    tracks.forEach(track => track.stop());
+                }
+
+                // Remove the video element and close button from the document
+                const videoElement = document.getElementById('camera-video');
+                const closeButton = document.querySelector('button');
+                if (videoElement) {
+                    videoElement.remove();
+                }
+                if (closeButton) {
+                    closeButton.remove();
+                }
+            }
+
+            function toggleCamera() {
+                // Check if the camera is already open
+                const videoElement = document.getElementById('camera-video');
+                if (videoElement) {
+                    closeCamera();
+                } else {
+                    openCamera();
+                }
+            }
+
+
+            
+    </script>
+    
+    
+</body>
+</html>

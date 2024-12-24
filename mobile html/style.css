@@ -1,0 +1,421 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+}
+
+.full-iphone {
+    border: 6px solid black;
+    height: 80vh;
+    width: 40vh;
+    background-image: url('blue\ wallpaper.jfif');
+    background-size: cover;
+    border-radius: 5vh;
+    margin-top: 6vh;
+    box-shadow: 0 0 17px 5px rgb(56, 56, 182);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notch {
+    margin-left: 3%;
+    border: 1px solid black;
+    background-color: black;
+    height: 3.5vh;
+    width: 14vh;
+    border-radius: 20vh;
+    margin-top: 1.5vh;
+}
+
+.time {
+    margin-top: -1vh;
+    margin-left: 2.5vh;
+    font-size: 3.3rem;
+    font-family: 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.am, .pm {
+    font-size: 1rem;
+}
+
+.date-day {
+    margin-top: 4vh;
+    font-size: 1.3rem;
+    font-family: 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: white;
+}
+.click
+{
+    margin-top: 52vh;
+    cursor: pointer;
+}
+
+.torchlight
+{
+    height: 4vh;
+    position: absolute;
+    top: 79%;
+    margin-left: -28vh;
+    border: 1px solid white;
+    border-radius: 20vh;
+    border-color: black;
+    padding: 5px;
+}
+.torchlight:hover
+{
+    background-color: white;
+    border-color: white;
+}
+.camera
+{
+    height: 4vh;
+    position: absolute;
+    top: 79%;  
+    margin-left: 28vh;
+    border: 1px solid white;
+    border-radius: 20vh;
+    border-color: black;
+    padding: 5px; 
+}
+.camera:hover
+{
+    background-color: white;
+    border-color: white;
+}
+.unlocked .date-day,
+.unlocked .time,
+.unlocked .torchlight,
+.unlocked .camera,
+.unlocked .click {
+    display: none;
+}
+
+#home {
+    display: none;
+    color: white;
+    text-align: center;
+    font-family: 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+.left-icons1 img, .left-icons2 img
+{
+    height: 6vh;
+    border-radius: 1vh;
+    justify-content: space-around;
+}
+.left-icons
+{
+    margin-left: -18vh;
+    margin-top: 6vh;
+    letter-spacing: 2vh;
+}
+.left-icons2
+{
+    margin-top: 1.5vh;
+}
+.left-icons img:hover
+{
+    height: 6.5vh;
+}
+.right-icons img:hover
+{
+    height: 6.5vh;
+}
+.bottom-icons img:hover
+{
+    height: 6.5vh;
+}
+.spotify img
+{
+    border-radius: 1.5vh;
+    height: 16vh;
+    position: absolute;
+    top: 17vh;
+    margin-left: 1.5vh;
+}
+.myphoto img
+{
+    border-radius: 1.5vh;
+    height: 16vh;
+    position: absolute;
+    top: 35vh;
+    margin-left: -17vh;
+}
+.pink-widget img
+{
+    border-radius: 1.5vh;
+    height: 16vh;
+    position: absolute;
+    top: 55vh;
+    margin-left: 1vh;
+}
+.right-icons1 img, .right-icons2 img
+{
+    height: 6vh;
+    border-radius: 1vh;
+    justify-content: space-around;
+}
+.right-icons
+{
+    margin-left: 18vh;
+    letter-spacing: 2vh;
+    margin-top: 4vh;
+}
+.right-icons2
+{
+    margin-top: 1.5vh;
+}
+.bottom-icons1 img, .bottom-icons2 img
+{
+    height: 6vh;
+    border-radius: 1vh;
+    justify-content: space-around;
+}
+.bottom-icons
+{
+    margin-left: -18vh;
+    letter-spacing: 2vh;
+    margin-top: 4vh;
+}
+.bottom-icons2
+{
+    margin-top: 1.5vh;
+}
+.app-container img
+{
+    height: 6vh;
+    border-radius: 1vh;
+}
+.app-container
+{
+    letter-spacing: 2vh;
+    margin-top: 6vh;
+    border-radius: 2vh;
+    padding: 1vh 2vh 1vh 2vh;
+    border: 0.5px solid transparent;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+}
+.dot1, .dot2
+{
+    border: 2px solid white;
+    border-radius: 3vh;
+    height: 0.5vh;
+}
+.dots {
+    position: absolute;
+    top: 73vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border: 1px solid white;
+    border-radius: 2vh;
+    padding: 0.3vh;
+}
+
+.dot 
+{
+    height: 7px;
+    width: 7px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active
+{
+    background-color: #007bff;
+}
+.app-container img:hover
+{
+    height: 6.5vh;
+}
+.notch-message {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.notch-container:hover .notch-message
+ {
+    display: block;
+}
+#home,
+#home2,
+#home3 {
+    display: none;
+    color: white;
+    text-align: center;
+    font-family: 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.unlocked #home {
+    display: block;
+}
+
+.unlocked #home2 {
+    display: none;
+}
+.unlocked #home3
+{
+    display: none;
+}
+
+.weather-widget
+{
+    height: 16vh;
+    border-radius: 2vh;
+    margin-top: 4vh;
+}
+.app-container2 img
+{
+    height: 6.2vh;
+    border-radius: 1vh;
+}
+.app-container2
+{
+    letter-spacing: 2vh;
+    margin-top: 12vh;
+    border-radius: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 92%;
+    margin-left: 1.5vh;
+    border: 0.5px solid transparent;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+}
+.app-container3 img
+{
+    height: 6.2vh;
+    border-radius: 1vh;
+}
+.app-container3
+{
+    letter-spacing: 2vh;
+    margin-top: 6vh;
+    border-radius: 2vh;
+    padding: 1vh 1vh 1vh 1vh;
+    width: 92%;
+    margin-left: 0.8vh;
+    border: 0.5px solid transparent;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+}
+.home2-icons img
+{
+    height: 6.5vh;
+    border-radius: 1vh;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+.home2-icons
+{
+    letter-spacing: 1.5vh;
+    margin-top: 4vh;
+}
+body img:hover
+{
+    cursor: pointer;
+}
+.home2-icons img:hover
+{
+    height: 6vh;
+}
+.fingerprint
+{
+    border-radius: 20vh;
+    height: 10vh;
+    margin-top: -5vh;
+    margin-left: 1vh;
+}
+.button2 
+{
+    margin-top: -60vh;
+    margin-right: 42vh;
+    padding: 35px 2px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black; 
+    border: none;
+    border-radius: 5px;
+}
+.button2:hover
+{
+    padding: 35px 3px;
+}
+.apple-logo 
+{
+    display: none;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin-left: 0vh;
+    border-radius: 4vh;
+    background-image: url('icons/pinkapple.jpg');
+}
+.apple-logo video
+{
+    display: none;
+    margin-left: 0vh;
+    border-radius: 4vh;
+}
+.home3-img
+{
+    margin-top: 53vh;
+    letter-spacing: 2vh;
+}
+.home3-images img
+{
+    height: 15vh;
+    border-radius: 3vh;
+}
+.home3-right-icons1 img, .home3-right-icons2 img
+{
+    height: 6vh;
+    border-radius: 1vh;
+}
+.home3-right-icons
+{
+    margin-left: -18vh;
+    letter-spacing: 2vh;
+    margin-top: 2vh;
+    justify-content: space-around;
+}
+.home3-right-icons2 img
+{
+    margin-top: 1.5vh;
+}
+.myphoto3 img
+{
+    border-radius: 1.5vh;
+    height: 16vh;
+    position: absolute;
+    top: 33vh;
+    margin-left: 2vh;
+}
+.large-photo img
+{
+    height: 18vh;
+    width: auto;
+    border-radius: 2vh;
+    margin-top: 4vh;
+}
+.notch-message img
+{
+    border-radius: 2vh;
+    height: 17vh;
+    margin-top: -1vh;
+}
+
+

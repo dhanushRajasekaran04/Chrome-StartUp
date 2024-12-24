@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide the overflow to prevent scrolling */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: none; /* Initially hidden */
+            z-index: 100;
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 60px; /* Adjust margin to avoid overlapping with the navbar */
+        }
+
+        /* Add styles for the swipe-down arrow */
+        .swipe-arrow {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+    <title>Swipe Down Navigation</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <span onclick="hideNavbar()" style="cursor: pointer;">Close</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Hello, World!</h1>
+        <p>This is a sample webpage with a swipe-down navigation bar.</p>
+    </div>
+
+    <!-- Swipe Down Arrow -->
+    <div class="swipe-arrow" id="swipeArrow" onclick="showNavbar()">↓</div>
+
+    <script>
+        let startY; // Variable to store the initial Y coordinate
+
+        // Detect touch start event
+        document.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+        });
+
+        // Detect touch move event
+        document.addEventListener('touchmove', function(e) {
+            const currentY = e.touches[0].clientY;
+
+            // Check if the swipe is from top to bottom
+            if (currentY > startY) {
+                showSwipeArrow(); // Display the swipe-down arrow
+            }
+        });
+
+        // Detect touch end event
+        document.addEventListener('touchend', function() {
+            hideSwipeArrow(); // Hide the swipe-down arrow
+        });
+
+        function showNavbar() {
+            // Show the navigation bar
+            const navbar = document.getElementById('navbar');
+            navbar.style.display = 'block';
+        }
+
+        function hideNavbar() {
+            // Hide the navigation bar
+            const navbar = document.getElementById('navbar');
+            navbar.style.display = 'none';
+        }
+
+        function showSwipeArrow() {
+            // Show the swipe-down arrow
+            const swipeArrow = document.getElementById('swipeArrow');
+            swipeArrow.style.opacity = '1';
+        }
+
+        function hideSwipeArrow() {
+            // Hide the swipe-down arrow
+            const swipeArrow = document.getElementById('swipeArrow');
+            swipeArrow.style.opacity = '0.5';
+        }
+    </script>
+</body>
+</html>

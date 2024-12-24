@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="full-iphone">
+        <div class="notch">
+        </div>
+        <div class="date-day" id="current-date-day">
+            
+        </div>
+        <div class="time" id="current-time">
+
+        </div>
+        <div class="swipe">
+            
+        </div>
+        <img src="torchlight.png" alt="torchlight" class="torchlight">
+        <img src="photo-camera-interface-symbol-for-button.png" alt="camera" class="camera">
+        <a href="#" class="click" onclick="unlock()">Click To Unlock</a>
+        <div id="home">
+            <div class="left-icons">
+         <div class="left-icons1">
+            <img src="icons/settings.png" alt="settings">
+            <img src="icons/calculator.png" alt="calculator"><br>
+         </div>
+         <div class="left-icons2">
+            <img src="icons/clock.png" alt="clock">
+            <img src="icons/gmail.png" alt="gmail">
+         </div>
+         </div>
+         <div class="spotify">
+            <img src="icons/spotify widget.jpeg" alt="spotify-widget">
+         </div>
+         <div class="myphoto">
+            <img src="icons/IMG-20231124-WA0060.jpg" alt="my-photo">
+         </div>
+        <div class="pink-widget">
+            <img src="icons/pink-song-widget.jpg" alt="pink-widget">
+        </div>
+
+         <div class="right-icons">
+         <div class="right-icons1">
+            <img src="icons/music.png" alt="music">
+            <img src="icons/notes.png" alt="notes">
+         </div>
+         <div class="right-icons2">
+            <img src="icons/podcast.png" alt="podcast">
+            <img src="icons/tips.png" alt="tips">
+         </div>
+         </div>
+
+         <div class="bottom-icons">
+            <div class="bottom-icons1">
+                <img src="icons/photos.png" alt="photos">
+                <img src="icons/weather.png" alt="weather">
+            </div>
+            <div class="bottom-icons2">
+                <img src="icons/airdrop.png" alt="airdrop">
+                <img src="icons/homei.png" alt="home">
+            </div>
+         </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function unlock() {
+            // Toggle the 'unlocked' class on the body
+            document.body.classList.toggle('unlocked');
+            
+            // Toggle the visibility of the additional content
+            const homeContent = document.getElementById('home');
+            homeContent.style.display = document.body.classList.contains('unlocked') ? 'block' : 'none';
+        }
+    
+        function updateTime() {
+            const currentTime = new Date();
+            let hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = (hours % 12) || 12; // Convert 0 to 12 for midnight
+            const timeString = `${hours}:${minutes} <span class="${ampm.toLowerCase()}">${ampm}</span>`;
+            document.getElementById('current-time').innerHTML = timeString;
+    
+            const options = { weekday: 'long', day: 'numeric' };
+            const dateString = currentTime.toLocaleDateString(undefined, options);
+            document.getElementById('current-date-day').innerHTML = dateString;
+        }
+    
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    
+    
+</body>
+</html>
