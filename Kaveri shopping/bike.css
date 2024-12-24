@@ -1,0 +1,90 @@
+@font-face
+  {
+    font-family: 'newitemname';
+    src: url('Gilroy-Light.ttf') format('truetype');
+  }
+body
+{
+    background-color: black;
+}
+.empty-box
+{
+    border: 2px solid white;
+    background-color: white;
+    width: 40%;
+    margin-left: 30%;
+    padding: 0.5vh;
+}
+.gif img
+{
+    height: 10vh;
+    transform: rotate(-45deg);
+    margin-left: 75vh;
+    margin-top: 5vh;
+    animation: 1.7s rocket1 forwards;
+}
+@keyframes rocket1
+{
+    from
+    {
+        margin-top: 100%;
+    }
+    to
+    {
+        margin-top: 1.5vh;
+    }
+}
+.flag img
+{
+    height: 6vh;
+}
+.gif2 img
+{
+    height: 10vh;
+    position: absolute;
+    top: 56.5vh;
+    transform: rotate(-45deg);
+    margin-left: 125vh;
+    animation: 2.8s rocket2 forwards;
+}
+@keyframes rocket2
+{
+    from
+    {
+        margin-top: 100%;
+    }
+    to
+    {
+        
+        margin-top: 1vh;
+    }
+}
+
+.flag
+{
+    border: 1px solid white;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 7vh;
+    text-align: center;
+    animation: 3s flag forwards;
+    font-family: 'newitemname',sans-serif;
+    letter-spacing: 2px;
+    background-image: url('dots.gif');
+}
+@keyframes flag
+{
+    from
+    {
+        margin-top: 100%;
+    }
+    to
+    {
+        margin-top: 20%;
+    }
+}
+body::-webkit-scrollbar
+{
+    border: none;
+}

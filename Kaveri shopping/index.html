@@ -1,0 +1,815 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-T6C+PF4V/9JzTaE8Ri+9fvJ+aHHMezylZH5GiX7Ii6SvPwX1VHR28Uq6sPQFn3g8N/o8bV/mSJCetfa8EXy44A==" crossorigin="anonymous" />
+
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Groceries</title>
+    </head>
+    <body>
+        
+        
+        <div class="nav-bar">
+            <div class="cart-container">
+                <div id="cart-box" style="display: none;" class="shake"></div>
+                <a href="cart.html"><div id="cart-count" class="cart-count">0</div></a>
+            </div>
+            <div class="search-container">
+                <a href="bike.html"><img src="kaveri logo.jpg" alt="logo" class="logo-small"></a>
+                <div class="brand-name">
+                <h1 class="kaveri-text">Kaveri</h1>
+                <p class="online-text" id="onlineText">Online Shopping</p>
+
+                </div>
+                
+                <input type="text" id="searchBar" placeholder="Delivery In Just 11minutes" class="search-bar" oninput="search()" autocomplete="off">
+                <div class="navigations">
+                    <div id="ci"><a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping cart-icon"></i>&nbsp;&nbsp;Cart</a>&nbsp;&nbsp;&nbsp;</div>
+                    <img src="menu.png" alt="menu" id="bars" class="menu-img">
+                </div>
+             
+            </div>
+
+           
+            <div id="noResultsMsg" class="msg"  style="display: none;">No results found.</div>
+
+            <div id="acc">
+                <ul>
+                    <button id="acc_btn"><i class="fa-solid fa-xmark"></i></button>
+                    <li><i class="fa-solid fa-users icon">&nbsp;&nbsp;&nbsp; Account</i></li>
+                    <li><i class="fa-solid fa-right-from-bracket icon">&nbsp;&nbsp;&nbsp; Sign Out</i></li>
+                    <li><i class="fa-solid fa-gear icon">&nbsp;&nbsp;&nbsp; Settings</i></li>
+
+                </ul>
+            </div>
+            </div>
+
+
+            <div class="top-offer">
+                <img src="offer.png" alt="offer-hand"><h2>30% Offer Apply Coupon Code "KAVERI30"</h2>
+                
+            </div>
+           
+
+
+        <div class="all-box">
+            <!-- Gold Winner -->
+
+  
+
+<!-- Maggie -->
+<div class="boxes" data-product="maggie">
+    <div class="carousel-container">
+    <img src="maggi.webp" alt="maggie">
+    <img src="maggie 2.jpg" alt="maggie2">
+    <img src="maggie 3.jpg" alt="maggi3">
+    </div>
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+
+    <h1>Maggie</h1>
+    <h3>Rs.14</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('maggie')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('maggie')">Buy Now</button>
+</div>
+
+<!-- Tata Salt -->
+<div class="boxes" data-product="tata_salt">
+    <div class="carousel-container">
+    <img src="salt.webp" alt="tata salt">
+    <img src="tatasalt2.jpg" alt="salt2">
+    <img src="salt3.jpg" alt="salt3">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Tata Salt</h1>
+    <h3>Rs.10</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('tata_salt')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('tata_salt')">Buy Now</button>
+</div>
+
+<!-- Toor Dal -->
+<div class="boxes" data-product="toor_dal">
+    <div class="carousel-container">
+    <img src="toor daal.jpg" alt="toor dal">
+    <img src="moongdal2.jpg" alt="toor dal2">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Toor Dal</h1>
+    <h3>Rs.90</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('toor_dal')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('toor_dal')">Buy Now</button>
+</div>
+
+<!-- Kellogs -->
+<div class="boxes" data-product="kellogs">
+    <div class="carousel-container">
+        <img src="kellogs.jpg" alt="kellogs">
+        <img src="kellogs2.webp" alt="kellogs2">
+        <img src="kellogs3.jpg" alt="kellogs3">
+        </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+        <h1>Kellogs</h1>
+    <h3>Rs.190</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('kellogs')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('kellogs')">Buy Now</button>
+</div>
+
+<!-- Coffee Powder -->
+<div class="boxes" data-product="coffee">
+    <div class="carousel-container">
+    <img src="coffee powder.webp" alt="coffee">
+    <img src="nescafe2.jpg" alt="coffee2">
+    <img src="nescafe3.jpg" alt="coffee3">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Coffee Powder</h1>
+    <h3>Rs.80</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('coffee')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('coffee')">Buy Now</button>
+</div>
+
+    
+<!-- Ashirvad Atta -->
+<div class="boxes" data-product="ashirvad_atta">
+    <div class="carousel-container">
+    <img src="ashirvad atta.jpg" alt="atta">
+    <img src="atta2.jpg" alt="atta2">
+    <img src="atta3.jpg" alt="atta3">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Ashirvad Atta</h1>
+    <h3>Rs.420</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('ashirvad_atta')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('ashirvad_atta')">Buy Now</button>
+</div>
+
+<!-- Oats -->
+<div class="boxes" data-product="oats">
+    <div class="carousel-container">
+    <img src="oats.webp" alt="oats">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Oats</h1>
+    <h3>Rs.200</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('oats')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('oats')">Buy Now</button>
+</div>
+
+<!-- Bru Coffee -->
+<div class="boxes" data-product="bru_coffee">
+    <div class="carousel-container">
+    <img src="bru coffe.webp" alt="bru">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Bru Coffee</h1>
+    <h3>Rs.110</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('bru_coffee')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('bru_coffee')">Buy Now</button>
+</div>
+
+       <!-- Hersheys -->
+<div class="boxes" data-product="hersheys">
+    <div class="carousel-container">
+    <img src="hersheys.webp" alt="hersheys">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Hersheys</h1>
+    <h3>Rs.220</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('hersheys')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('hersheys')">Buy Now</button>
+</div>
+
+<!-- Bourn Vita -->
+<div class="boxes" data-product="bourn_vita">
+    <div class="carousel-container">
+    <img src="bourn vits.webp" alt="bourn vita">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Bourn Vita</h1>
+    <h3>Rs.250</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('bourn_vita')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('bourn_vita')">Buy Now</button>
+</div>
+
+<!-- Kissan Jam -->
+<div class="boxes" data-product="kissan_jam">
+    <div class="carousel-container">
+    <img src="kissan jam.webp" alt="jam">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Kissan Jam</h1>
+    <h3>Rs.140</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('kissan_jam')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('kissan_jam')">Buy Now</button>
+</div>
+
+<!-- Basmati Rice -->
+<div class="boxes" data-product="basmati_rice">
+    <div class="carousel-container">
+    <img src="rice.webp" alt="rice">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Basmati Rice</h1>
+    <h3>Rs.500</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('basmati_rice')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('basmati_rice')">Buy Now</button>
+</div>
+
+       <!-- Pickle -->
+<div class="boxes" data-product="pickle">
+    <div class="carousel-container">
+    <img src="pickle.jpg" alt="pickle">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Pickle</h1>
+    <h3>Rs.50</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('pickle')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('pickle')">Buy Now</button>
+</div>
+
+<!-- Cocunut oil -->
+<div class="boxes" data-product="cocunut_oil">
+    <div class="carousel-container">
+    <img src="cocunet oil.webp" alt="oil">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Cocunut oil</h1>
+    <h3>Rs.180</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('cocunut_oil')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('cocunut_oil')">Buy Now</button>
+</div>
+
+<!-- Vim Gel -->
+<div class="boxes" data-product="vim_gel">
+    <div class="carousel-container">
+    <img src="vimgel.webp" alt="vimgel">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Vim Gel</h1>
+    <h3>Rs.80</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('vim_gel')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('vim_gel')">Buy Now</button>
+</div>
+
+<!-- Honey -->
+<div class="boxes" data-product="honey">
+    <div class="carousel-container">
+    <img src="honey.webp" alt="Honey">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Honey</h1>
+    <h3>Rs.230</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('honey')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('honey')">Buy Now</button>
+</div>
+
+        <!-- Elachi -->
+<div class="boxes" data-product="elachi">
+    <div class="carousel-container">
+    <img src="elachi.webp" alt="elachi">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Elachi</h1>
+    <h3>Rs.130</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('elachi')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('elachi')">Buy Now</button>
+</div>
+
+<!-- Nangrow -->
+<div class="boxes" data-product="nangrow">
+    <div class="carousel-container">
+    <img src="nangrow.webp" alt="nangrow">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Nangrow</h1>
+    <h3>Rs.330</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('nangrow')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('nangrow')">Buy Now</button>
+</div>
+
+<!-- Peanuts -->
+<div class="boxes" data-product="peanuts">
+    <div class="carousel-container">
+    <img src="peanuts.webp" alt="peanuts">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Peanuts</h1>
+    <h3>Rs.260</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('peanuts')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('peanuts')">Buy Now</button>
+</div>
+
+<!-- Cashew -->
+<div class="boxes" data-product="cashew">
+    <div class="carousel-container">
+    <img src="cashew.webp" alt="cashew">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Cashew</h1>
+    <h3>Rs.600</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('cashew')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('cashew')">Buy Now</button>
+</div>
+
+<!-- Lizol -->
+<div class="boxes" data-product="lizol">
+    <div class="carousel-container">
+    <img src="lizol.webp" alt="lizol">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Lizol</h1>
+    <h3>Rs.190</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('lizol')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('lizol')">Buy Now</button>
+</div>
+
+        <!-- Parrys Sugar -->
+<div class="boxes" data-product="parrys_sugar">
+    <div class="carousel-container">
+    <img src="sugar.jpg" alt="sugar">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Parrys Sugar</h1>
+    <h3>Rs.60</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('parrys_sugar')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('parrys_sugar')">Buy Now</button>
+</div>
+
+<!-- Horlicks -->
+<div class="boxes" data-product="horlicks">
+    <div class="carousel-container">
+    <img src="horlicks.webp" alt="horlicks">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Horlicks</h1>
+    <h3>Rs.170</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('horlicks')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('horlicks')">Buy Now</button>
+</div>
+
+<!-- Boost -->
+<div class="boxes" data-product="boost">
+    <div class="carousel-container">
+    <img src="boost.webp" alt="Boost">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Boost</h1>
+    <h3>Rs.190</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('boost')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('boost')">Buy Now</button>
+</div>
+
+<!-- Harpic -->
+<div class="boxes" data-product="harpic">
+    <div class="carousel-container">
+    <img src="harpic.webp" alt="harpic">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Harpic</h1>
+    <h3>Rs.40</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('harpic')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('harpic')">Buy Now</button>
+</div>
+
+<!-- Peppercorn -->
+<div class="boxes" data-product="peppercorn">
+    <div class="carousel-container">
+    <img src="peppercorn.webp" alt="pepper">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Peppercorn</h1>
+    <h3>Rs.30</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('peppercorn')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('peppercorn')">Buy Now</button>
+</div>
+
+<!-- Soya Sauce -->
+<div class="boxes" data-product="soya_sauce">
+    <div class="carousel-container">
+    <img src="soya sauce.webp" alt="soya">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Soya Sauce</h1>
+    <h3>Rs.80</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('soya_sauce')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('soya_sauce')">Buy Now</button>
+</div>
+
+<!-- Green Chilli Sauce -->
+<div class="boxes" data-product="green_chilli_sauce">
+    <div class="carousel-container">
+    <img src="green chilli sauce.webp" alt="green chilli">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Green Chilli Sauce</h1>
+    <h3>Rs.90</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('green_chilli_sauce')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('green_chilli_sauce')">Buy Now</button>
+</div>
+
+<!-- Tomato Sauce -->
+<div class="boxes" data-product="tomato_sauce">
+    <div class="carousel-container">
+    <img src="tomato sauce.webp" alt="tomato">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Tomato Sauce</h1>
+    <h3>Rs.180</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('tomato_sauce')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('tomato_sauce')">Buy Now</button>
+</div>
+
+<!-- Vinegar -->
+<div class="boxes" data-product="vinegar">
+    <div class="carousel-container">
+    <img src="vingar.jpg" alt="vinegar">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Vinegar</h1>
+    <h3>Rs.70</h3>
+    <h2>Coupen InEligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('vinegar')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('vinegar')">Buy Now</button>
+</div>
+
+<div class="boxes" data-product="santoor">
+    <div class="carousel-container">
+    <img src="santoor.webp" alt="santoor">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Santoor soap</h1>
+    <h3>Rs.169</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('Santoor_soap')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('Santoor_soap')">Buy Now</button>
+</div>
+
+
+<div class="boxes" data-product="cinthool">
+    <div class="carousel-container">
+    <img src="cinthol.jpg" alt="cinthol">
+    </div>
+    
+    <div class="clock">
+    <h4><img src="delivery-man.png" alt="clock"> 11min</h4>
+    </div>
+    <h1>Cinthol soap</h1>
+    <h3>Rs.70</h3>
+    <h2>Coupen Eligible</h2>
+    <button type="button" class="add-to-cart" onclick="shake();addToCart('Cinthol_soap')">Add To Cart</button>
+    <button id="buy-btn" onclick="buynow('Cinthol_soap')">Buy Now</button>
+</div>
+
+<div id="cart-message" class="cart-message"></div>
+
+
+<!-- Place this script in the head or at the end of the body -->
+<script>
+    const onlineTextElement = document.getElementById("onlineText");
+  
+    const categories = ["Groceries", "Vegetables", "Textile", "Nonveg", "Fruits"];
+    let currentIndex = 0;
+  
+    function rotateCategories() {
+      onlineTextElement.textContent = categories[currentIndex];
+      currentIndex = (currentIndex + 1) % categories.length;
+    }
+  
+    // Call the function to start rotating categories
+    setInterval(rotateCategories, 3000); // Change the interval (in milliseconds) as needed
+
+
+    // Add this to your existing script.js
+document.querySelectorAll('.boxes').forEach(box => {
+  const container = box.querySelector('.carousel-container');
+  const images = container.querySelectorAll('img');
+  let currentIndex = 0;
+
+  box.addEventListener('mouseenter', () => {
+    currentIndex = 0;
+    updateCarousel();
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    }, 3000); // Change the interval (in milliseconds) as needed
+
+    box.addEventListener('mouseleave', () => {
+      clearInterval(interval);
+      container.style.transform = 'translateX(0%)';
+    });
+  });
+
+  function updateCarousel() {
+    const translationValue = -currentIndex * 100;
+    container.style.transform = `translateX(${translationValue}%)`;
+  }
+});
+
+
+var bar = document.getElementById("bars");
+var acc = document.getElementById("acc");
+var close = document.getElementById("acc_btn");
+
+bars.addEventListener("click",function()
+{
+    acc.style.display = "block";
+    acc.style.transition = "opacity 2s ease-in-out";
+});
+close.addEventListener("click",function()
+{
+    acc.style.display = "none";
+});
+
+
+
+
+
+function shake() {
+    var cartButton = document.getElementById("ci");
+    cartButton.classList.add('shake');
+
+    setTimeout(function() {
+        cartButton.classList.remove('shake');
+    }, 500); 
+}
+
+
+let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+ // Function to add items to the cart
+ function addToCart(product, image) {
+      const existingItem = cartItems.find(item => item.product === product);
+
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cartItems.push({ product, image, quantity: 1 });
+      }
+
+      // Update the cart display
+      updateCartDisplay();
+
+      // Save the cart data to local storage
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+
+      // Update the cart count in the navbar
+      updateCartCount();
+
+      // Show a success message
+      const message = `${product} added successfully to the cart!`;
+      showCartMessage(message);
+    }
+
+    // Function to update the cart count in the navbar
+    function updateCartCount() {
+      const cartCountElement = document.getElementById('cart-count');
+      const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+      cartCountElement.textContent = cartCount;
+      cartCountElement.style.display = cartCount > 0 ? 'block' : 'none';
+    }
+
+    // Function to update the cart display
+    function updateCartDisplay() {
+      const cartBox = document.getElementById('cart-box');
+      cartBox.innerHTML = '';
+
+      cartItems.forEach(item => {
+        const cartItemBox = document.createElement('div');
+        cartItemBox.innerHTML = `<img src="${item.image}" alt="${item.product}">
+                                <div>${item.product} x${item.quantity}</div>`;
+        cartBox.appendChild(cartItemBox);
+      });
+
+      // Update the cart count in the navbar
+      updateCartCount();
+    }
+
+    // Load cart data on page load
+    updateCartDisplay();
+
+    // ... (your existing code)
+
+
+function showCartMessage(message) {
+  const messageElement = document.getElementById('cart-message');
+  messageElement.textContent = message;
+
+  // Display the message
+  messageElement.style.display = 'block';
+
+  // Hide the message after 2 seconds (adjust as needed)
+  setTimeout(() => {
+    messageElement.style.display = 'none';
+  }, 2000);
+}
+
+
+
+
+var buybtn = document.getElementById("buy-btn");
+
+function buynow()
+{
+    confirm = window.confirm("You Want To Buy Directly");
+    if(confirm)
+    {
+        window.alert("You have Purchased Successfully...!");
+        window.location.href = "cart.html";
+    }
+    else
+    {
+        window.alert("Purchase Cancelled....");
+        window.location.href = "index.html";
+    }
+}
+
+
+
+function buynow(product) {
+        const item = cartItems.find(item => item.product === product);
+
+        if (item) {
+            item.quantity++;
+        } else {
+            cartItems.push({ product, quantity: 1 });
+        }
+
+        // Update the cart display
+        updateCartDisplay();
+
+        // Save the cart data to local storage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Update the cart count in the navbar
+        updateCartCount();
+
+        // Redirect to the cart page
+        window.location.href = "cart.html";
+    }
+
+
+  
+    const searchInput = document.getElementById('searchBar');
+    const specificItems = ["Maggie", "Gold Winner", "Sauce"];
+    const defaultPlaceholder = "Delivery In Just 11minutes";
+
+    let currentItemIndex = 0;
+
+    function rotateItems() {
+        const newItem = specificItems[currentItemIndex];
+        searchInput.placeholder = "";
+        fadeInPlaceholder(newItem);
+        currentItemIndex = (currentItemIndex + 1) % specificItems.length;
+    }
+
+    function fadeInPlaceholder(newItem) {
+        let opacity = 0;
+        const fadeInInterval = setInterval(() => {
+            opacity += 0.1;
+            searchInput.placeholder = `Search "${newItem}"`;
+            searchInput.style.opacity = opacity;
+
+            if (opacity >= 1) {
+                clearInterval(fadeInInterval);
+            }
+        }, 100);
+    }
+
+    setInterval(rotateItems, 3000); // Change the interval (in milliseconds) as needed
+    
+
+
+  </script>
+  
+
+    </body>
+    </html>
